@@ -9,4 +9,5 @@ How to download the required JSON files:
 Once users upload these files, they can see tables of their followers, following, accounts they follow who don't follow them back, and vice versa,
 along with datetime data provided by Instagram and basic Plotly visualization.
 
-![Uploading instagram_project_screenshot.png…]()
+
+![instagram_project_screenshot](https://github.com/user-attachments/assets/2d302b74-14a9-4c00-b017-e2a3019f6896)
