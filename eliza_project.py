@@ -55,13 +55,13 @@ def extract_data(file):
     Extracts the zip file (must be in downloads folder) to the local project directory, and returns string of the
     path to the zip folder.
     """
-    zip_folder = f'C:/Users/rjc52/Downloads/{file.name}'
-    extract_location = 'C:/Users/rjc52/PycharmProjects/instagram_projects/current_extract_folder'
+    # zip_folder = f'C:/Users/rjc52/Downloads/{file.name}'
+    # extract_location = 'C:/Users/rjc52/PycharmProjects/instagram_projects/current_extract_folder'
 
-    with zipfile.ZipFile(zip_folder, 'r') as zip_file:
-        zip_file.extractall(extract_location)
+    with zipfile.ZipFile(file, 'r') as zip_file:
+        zip_file.extractall('extracted_file')
 
-    return extract_location
+    return 'extracted_file'
 
 
 def process_data(zip_folder):
