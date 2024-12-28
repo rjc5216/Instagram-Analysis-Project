@@ -218,7 +218,6 @@ if __name__ == '__main__':
             plotly_chart.update_layout(xaxis_title='Date',
                                        yaxis_title='# of followers/following')
             st.plotly_chart(plotly_chart)
-            st.write(line_chart_data_dict)
 
     else:
         # If there was a file but it was cleared, delete the directory and reset the session state variables
