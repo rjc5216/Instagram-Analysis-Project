@@ -4,7 +4,7 @@ Streamlit-based Python project that allows users to analyze their followers/foll
 Currently hosted and running at https://instagram-analysis.streamlit.app/
 
 How to download the required JSON files:
-  - Go to Instgram settings
+  - Go to Instagram settings
   - Search and select "download your information"
   - Make sure you select "followers" and "following" in the connections section.
 
