@@ -85,7 +85,10 @@ def process_data(zip_folder):
             # I simply loop through the list and grab the name and timestamp for each follower
             followers_json_data = json.load(followers_file_object)
             for dictionary in followers_json_data:
-                name = dictionary['string_list_data'][0]['value']
+                # OLD JSON FORMAT
+                # name = dictionary['['string_list_data'][0]['value']']
+                # NEW JSON FORMAT
+                name = dictionary['title']
                 timestamp = dictionary['string_list_data'][0]['timestamp']
                 datetime_object = datetime.fromtimestamp(timestamp)
                 # Appends retrieved data to master dictionary
