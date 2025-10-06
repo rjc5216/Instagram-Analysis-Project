@@ -100,7 +100,10 @@ def process_data(zip_folder):
         with open(following_path, 'r') as followers_file_object:
             followers_json_data = json.load(followers_file_object)
             for dictionary in followers_json_data['relationships_following']:
-                name = dictionary['string_list_data'][0]['value']
+                # OLD JSON FORMAT
+                # name = dictionary['['string_list_data'][0]['value']']
+                # NEW JSON FORMAT
+                name = dictionary['title']
                 timestamp = dictionary['string_list_data'][0]['timestamp']
                 datetime_object = datetime.fromtimestamp(timestamp)
                 # Appends retrieved data to master dictionary
