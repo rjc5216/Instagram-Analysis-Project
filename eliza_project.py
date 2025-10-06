@@ -86,9 +86,8 @@ def process_data(zip_folder):
             followers_json_data = json.load(followers_file_object)
             for dictionary in followers_json_data:
                 # OLD JSON FORMAT
-                # name = dictionary['['string_list_data'][0]['value']']
-                # NEW JSON FORMAT
-                name = dictionary['title']
+                name = dictionary['string_list_data'][0]['value']
+                
                 timestamp = dictionary['string_list_data'][0]['timestamp']
                 datetime_object = datetime.fromtimestamp(timestamp)
                 # Appends retrieved data to master dictionary
@@ -97,12 +96,11 @@ def process_data(zip_folder):
 
     # Repeats same process with following. Could refactor both into one function called twice, but would have to catch
     # the extra dict index of 'relationships_following' for the following file
-        with open(following_path, 'r') as followers_file_object:
-            followers_json_data = json.load(followers_file_object)
-            for dictionary in followers_json_data['relationships_following']:
+        with open(following_path, 'r') as following_file_object:
+            following_json_data = json.load(following_file_object)
+            for dictionary in following_json_data['relationships_following']:
                 # OLD JSON FORMAT
-                # name = dictionary['['string_list_data'][0]['value']']
-                # NEW JSON FORMAT
+                # name = dictionary['string_list_data'][0]['value']
                 name = dictionary['title']
                 timestamp = dictionary['string_list_data'][0]['timestamp']
                 datetime_object = datetime.fromtimestamp(timestamp)
